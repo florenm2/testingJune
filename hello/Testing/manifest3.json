@@ -1,0 +1,141 @@
+{
+    "manifestVersion": "1.1",
+    "id": "f768a980-026a-4af0-9006-bfb3f403139f",
+    "version": "1.0.0.0",
+    "providerName": "Contoso",
+    "defaultLocale": "en-US",
+    "displayName": {
+        "default": "Testing"
+    },
+    "description": {
+        "default": "A template to get started."
+    },
+    "icons": {
+        "16": "https://localhost:3000/assets/icon-16.png",
+        "32": "https://localhost:3000/assets/icon-32.png",
+        "80": "https://localhost:3000/assets/icon-80.png"
+    },
+    "highResolutionIconUrl": "https://localhost:3000/assets/icon-64.png",
+    "supportUrl": "https://www.contoso.com/help",
+    "appDomains": [
+        "https://www.contoso.com"
+    ],
+    "hosts": [
+        "WORD"
+    ],
+    "defaultSettings": {
+        "sourceLocation": {
+            "default": "https://localhost:3000/taskpane.html"
+        }
+    },
+    "permissions": [
+        "ReadWriteDocument"
+    ],
+    "versionOverrides": {
+        "version": "1.0.0.0",
+        "hosts": [
+            {
+                "host": "WORD",
+                "desktopFormFactor": {
+                    "getStarted": {
+                        "title": "Get started with your sample add-in!",
+                        "description": "Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Taskpane' button to get started.",
+                        "learnMoreUrl": "https://go.microsoft.com/fwlink/?LinkId=276812"
+                    },
+                    "functionFile": "https://localhost:3000/commands.html",
+                    "extensionPoint": {
+                        "officeTab": {
+                            "id": "TabHome",
+                            "groups": [
+                                {
+                                    "id": "CommandsGroup",
+                                    "label": "Commands Group",
+                                    "icons": {
+                                        "16": "https://localhost:3000/assets/icon-16.png",
+                                        "32": "https://localhost:3000/assets/icon-32.png",
+                                        "80": "https://localhost:3000/assets/icon-80.png"
+                                    },
+                                    "controls": [
+                                        {
+                                            "id": "TaskpaneButton",
+                                            "type": "Button",
+                                            "label": "Show Taskpane",
+                                            "supertip": {
+                                                "title": "Show Taskpane",
+                                                "description": "Click to Show a Taskpane"
+                                            },
+                                            "icons": {
+                                                "16": "https://localhost:3000/assets/icon-16.png",
+                                                "32": "https://localhost:3000/assets/icon-32.png",
+                                                "80": "https://localhost:3000/assets/icon-80.png"
+                                            },
+                                            "action": {
+                                                "type": "ShowTaskpane",
+                                                "taskpaneId": "ButtonId1",
+                                                "sourceLocation": "https://localhost:3000/taskpane.html"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "resources": {
+            "images": [
+                {
+                    "id": "Icon.16x16",
+                    "default": "https://localhost:3000/assets/icon-16.png"
+                },
+                {
+                    "id": "Icon.32x32",
+                    "default": "https://localhost:3000/assets/icon-32.png"
+                },
+                {
+                    "id": "Icon.80x80",
+                    "default": "https://localhost:3000/assets/icon-80.png"
+                }
+            ],
+            "urls": [
+                {
+                    "id": "GetStarted.LearnMoreUrl",
+                    "default": "https://go.microsoft.com/fwlink/?LinkId=276812"
+                },
+                {
+                    "id": "Commands.Url",
+                    "default": "https://localhost:3000/commands.html"
+                },
+                {
+                    "id": "Taskpane.Url",
+                    "default": "https://localhost:3000/taskpane.html"
+                }
+            ],
+            "shortStrings": [
+                {
+                    "id": "GetStarted.Title",
+                    "default": "Get started with your sample add-in!"
+                },
+                {
+                    "id": "CommandsGroup.Label",
+                    "default": "Commands Group"
+                },
+                {
+                    "id": "TaskpaneButton.Label",
+                    "default": "Show Taskpane"
+                }
+            ],
+            "longStrings": [
+                {
+                    "id": "GetStarted.Description",
+                    "default": "Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."
+                },
+                {
+                    "id": "TaskpaneButton.Tooltip",
+                    "default": "Click to Show a Taskpane"
+                }
+            ]
+        }
+    }
+}

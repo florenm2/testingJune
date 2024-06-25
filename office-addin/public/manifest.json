@@ -1,0 +1,50 @@
+{
+    "manifestVersion": "1.1",
+    "id": "12345678-1234-1234-1234-123456789abc",
+    "version": "1.0.0.0",
+    "providerName": "Your Provider Name",
+    "defaultLocale": "en-US",
+    "displayName": {
+        "default": "Your Add-in Name"
+    },
+    "description": {
+        "default": "Your add-in description"
+    },
+    "hosts": [
+        "EXCEL",
+        "WORD",
+        "POWERPOINT",
+        "OUTLOOK"
+    ],
+    "requirements": {
+        "sets": [
+            {
+                "name": "ExcelApi",
+                "minVersion": "1.1"
+            },
+            {
+                "name": "WordApi",
+                "minVersion": "1.1"
+            },
+            {
+                "name": "PowerPointApi",
+                "minVersion": "1.1"
+            },
+            {
+                "name": "Mailbox",
+                "minVersion": "1.1"
+            }
+        ]
+    },
+    "icons": {
+        "16": "https://your-icon-url.png",
+        "32": "https://your-icon-url.png",
+        "80": "https://your-icon-url.png"
+    },
+    "highResolutionIconUrl": "https://your-high-res-icon-url.png",
+    "supportUrl": "https://your-support-url",
+    "privacyUrl": "https://your-privacy-url",
+    "appDomains": [
+        "https://your-app-domain"
+    ]
+}

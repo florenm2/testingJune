@@ -1,0 +1,34 @@
+{
+    "manifestVersion": "1.1",
+    "id": "12345678-1234-1234-1234-123456789012",
+    "version": "1.0.0.0",
+    "providerName": "Your Provider Name",
+    "defaultLocale": "en-US",
+    "displayName": {
+        "default": "Word iFrame Add-in"
+    },
+    "description": {
+        "default": "An Office Add-in to insert an iFrame into a Word document"
+    },
+    "icons": {
+        "16": "https://yourdomain.com/assets/icon.png",
+        "32": "https://yourdomain.com/assets/icon.png",
+        "80": "https://yourdomain.com/assets/icon.png"
+    },
+    "highResolutionIconUrl": "https://yourdomain.com/assets/hi-res-icon.png",
+    "supportUrl": "https://yourdomain.com/support",
+    "appDomains": [
+        "https://yourdomain.com"
+    ],
+    "hosts": [
+        "WORD"
+    ],
+    "defaultSettings": {
+        "sourceLocation": {
+            "default": "https://localhost:3000/taskpane.html"
+        }
+    },
+    "permissions": [
+        "ReadWriteDocument"
+    ]
+}

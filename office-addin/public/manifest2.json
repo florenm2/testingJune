@@ -1,66 +1,181 @@
 {
-    "manifestVersion": "1.1",
-    "id": "C4E304B6-24D2-416B-9BC6-2B4C4D37AEFB",
-    "version": "1.0.0.0",
-    "providerName": "Contoso",
-    "defaultLocale": "en-US",
-    "displayName": {
-        "default": "Hello world"
+    "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/op/extensions/MicrosoftTeams.schema.json",
+    "id": "00000000-0000-0000-0000-000000000000",
+    "version": "1.0.0",
+    "manifestVersion": "devPreview",
+    "name": {
+        "short": "Name of your app (<=30 chars)",
+        "full": "Full name of app, if longer than 30 characters (<=100 chars)"
     },
     "description": {
-        "default": "A simple hello world Office Add-in."
+        "short": "Short description of your app (<= 80 chars)",
+        "full": "Full description of your app (<= 4000 chars)"
     },
     "icons": {
-        "16": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-16.png",
-        "32": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-32.png",
-        "80": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-80.png"
+        "outline": "outline.png",
+        "color": "color.png"
     },
-    "highResolutionIconUrl": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-64.png",
-    "supportUrl": "https://learn.microsoft.com/office/dev/add-ins/overview/office-add-in-code-samples",
-    "appDomains": [
-        "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world"
-    ],
-    "hosts": [
-        "WORD"
-    ],
-    "defaultSettings": {
-        "sourceLocation": {
-            "default": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/taskpane.html"
+    "accentColor": "#230201",
+    "developer": {
+        "name": "Contoso",
+        "websiteUrl": "https://www.contoso.com",
+        "privacyUrl": "https://www.contoso.com/privacy",
+        "termsOfUseUrl": "https://www.contoso.com/servicesagreement"
+    },
+    "localizationInfo": {
+        "defaultLanguageTag": "en-us",
+        "additionalLanguages": [
+            {
+                "languageTag": "es-es",
+                "file": "es-es.json"
+            }
+        ]
+    },
+    "webApplicationInfo": {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "resource": "api://www.contoso.com/prodapp"
+    },
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "Mailbox.ReadWrite.User",
+                    "type": "Delegated"
+                }
+            ]
         }
     },
-    "permissions": [
-        "ReadWriteDocument"
-    ],
-    "versionOverrides": {
-        "manifestVersion": "1.1",
-        "version": "1.0.0.0",
-        "providerName": "Contoso",
-        "defaultLocale": "en-US",
-        "displayName": {
-            "default": "Hello world"
-        },
-        "description": {
-            "default": "A simple hello world Office Add-in."
-        },
-        "icons": {
-            "16": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-16.png",
-            "32": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-32.png",
-            "80": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-80.png"
-        },
-        "highResolutionIconUrl": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-64.png",
-        "supportUrl": "https://learn.microsoft.com/office/dev/add-ins/overview/office-add-in-code-samples",
-        "appDomains": [
-            "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world"
-        ],
-        "hosts": [
-            {
-                "host": "WORD",
-                "desktopFormFactor": {
-                    "getStarted": {
-                        "title": "Get started with the Hello world add-in!",
-                        "description": "Your sample add-in loaded successfully. Go to the HOME tab and click the 'Hello world' button to get started.",
-                        "learnMoreUrl": "http://go.microsoft.com/fwlink/?LinkId=276812"
+    "extensions": [
+        {
+            "requirements": {
+                "scopes": [
+                    "document",
+                    "presentation"
+                ],
+                "capabilities": [
+                    {
+                        "name": "Document",
+                        "minVersion": "1.1"
                     },
-                    "extensionPoint": {
-                        "officeTab": {
-                            "id": "
+                    {
+                        "name": "Presentation",
+                        "minVersion": "1.1"
+                    }
+                ]
+            },
+            "runtimes": [
+                {
+                    "requirements": {
+                        "capabilities": [
+                            {
+                                "name": "Document",
+                                "minVersion": "1.10"
+                            },
+                            {
+                                "name": "Presentation",
+                                "minVersion": "1.10"
+                            }
+                        ]
+                    },
+                    "id": "eventsRuntime",
+                    "type": "general",
+                    "code": {
+                        "page": "https://contoso.com/events.html",
+                        "script": "https://contoso.com/events.js"
+                    },
+                    "lifetime": "short",
+                    "actions": [
+                        {
+                            "id": "onDocumentOpen",
+                            "type": "executeFunction"
+                        },
+                        {
+                            "id": "onPresentationOpen",
+                            "type": "executeFunction"
+                        }
+                    ]
+                },
+                {
+                    "requirements": {
+                        "capabilities": [
+                            {
+                                "name": "Document",
+                                "minVersion": "1.1"
+                            },
+                            {
+                                "name": "Presentation",
+                                "minVersion": "1.1"
+                            }
+                        ]
+                    },
+                    "id": "commandsRuntime",
+                    "type": "general",
+                    "code": {
+                        "page": "https://contoso.com/commands.html",
+                        "script": "https://contoso.com/commands.js"
+                    },
+                    "lifetime": "short",
+                    "actions": [
+                        {
+                            "id": "action1",
+                            "type": "executeFunction"
+                        },
+                        {
+                            "id": "action2",
+                            "type": "executeFunction"
+                        },
+                        {
+                            "id": "action3",
+                            "type": "executeFunction"
+                        }
+                    ]
+                }
+            ],
+            "ribbons": [
+                {
+                    "contexts": [
+                        "documentCompose",
+                        "presentationCompose"
+                    ],
+                    "tabs": [
+                        {
+                            "builtInTabId": "TabDefault",
+                            "groups": [
+                                {
+                                    "id": "dashboard",
+                                    "label": "Controls",
+                                    "controls": [
+                                        {
+                                            "id": "control1",
+                                            "type": "button",
+                                            "label": "Action 1",
+                                            "icons": [
+                                                {
+                                                    "size": 16,
+                                                    "url": "test_16.png"
+                                                },
+                                                {
+                                                    "size": 32,
+                                                    "url": "test_32.png"
+                                                },
+                                                {
+                                                    "size": 80,
+                                                    "url": "test_80.png"
+                                                }
+                                            ],
+                                            "supertip": {
+                                                "title": "Action 1 Title",
+                                                "description": "Action 1 Description"
+                                            },
+                                            "actionId": "action1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

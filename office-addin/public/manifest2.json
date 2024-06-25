@@ -1,31 +1,33 @@
 {
     "manifestVersion": "1.1",
-    "id": "12345678-1234-1234-1234-123456789012",
+    "id": "7d3c8f6e-35e7-4c7e-8c1f-d4a6bdb2a4ff",
     "version": "1.0.0.0",
     "providerName": "Your Provider Name",
     "defaultLocale": "en-US",
     "displayName": {
-        "default": "Word iFrame Add-in"
+        "default": "iFrame Add-in"
     },
     "description": {
-        "default": "An Office Add-in to insert an iFrame into a Word document"
+        "default": "An Office Add-in to insert an iFrame into a Word document and PowerPoint presentation"
     },
     "icons": {
-        "16": "https://yourdomain.com/assets/icon.png",
-        "32": "https://yourdomain.com/assets/icon.png",
-        "80": "https://yourdomain.com/assets/icon.png"
+        "16": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/16px-Markdown-mark.svg.png",
+        "32": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/32px-Markdown-mark.svg.png",
+        "80": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/80px-Markdown-mark.svg.png"
     },
-    "highResolutionIconUrl": "https://yourdomain.com/assets/hi-res-icon.png",
-    "supportUrl": "https://yourdomain.com/support",
+    "highResolutionIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/256px-Markdown-mark.svg.png",
+    "supportUrl": "https://www.example.com/support",
+    "privacyUrl": "https://www.example.com/privacy",
     "appDomains": [
-        "https://yourdomain.com"
+        "https://www.example.com"
     ],
     "hosts": [
-        "WORD"
+        "WORD",
+        "POWERPOINT"
     ],
     "defaultSettings": {
         "sourceLocation": {
-            "default": "https://localhost:3000/taskpane.html"
+            "default": "https://www.example.com/taskpane.html"
         }
     },
     "permissions": [

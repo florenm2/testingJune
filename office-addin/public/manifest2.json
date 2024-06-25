@@ -1,36 +1,66 @@
 {
     "manifestVersion": "1.1",
-    "id": "7d3c8f6e-35e7-4c7e-8c1f-d4a6bdb2a4ff",
+    "id": "C4E304B6-24D2-416B-9BC6-2B4C4D37AEFB",
     "version": "1.0.0.0",
-    "providerName": "Your Provider Name",
+    "providerName": "Contoso",
     "defaultLocale": "en-US",
     "displayName": {
-        "default": "iFrame Add-in"
+        "default": "Hello world"
     },
     "description": {
-        "default": "An Office Add-in to insert an iFrame into a Word document and PowerPoint presentation"
+        "default": "A simple hello world Office Add-in."
     },
     "icons": {
-        "16": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/16px-Markdown-mark.svg.png",
-        "32": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/32px-Markdown-mark.svg.png",
-        "80": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/80px-Markdown-mark.svg.png"
+        "16": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-16.png",
+        "32": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-32.png",
+        "80": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-80.png"
     },
-    "highResolutionIconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/256px-Markdown-mark.svg.png",
-    "supportUrl": "https://www.example.com/support",
-    "privacyUrl": "https://www.example.com/privacy",
+    "highResolutionIconUrl": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-64.png",
+    "supportUrl": "https://learn.microsoft.com/office/dev/add-ins/overview/office-add-in-code-samples",
     "appDomains": [
-        "https://www.example.com"
+        "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world"
     ],
     "hosts": [
-        "WORD",
-        "POWERPOINT"
+        "WORD"
     ],
     "defaultSettings": {
         "sourceLocation": {
-            "default": "https://www.example.com/taskpane.html"
+            "default": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/taskpane.html"
         }
     },
     "permissions": [
         "ReadWriteDocument"
-    ]
-}
+    ],
+    "versionOverrides": {
+        "manifestVersion": "1.1",
+        "version": "1.0.0.0",
+        "providerName": "Contoso",
+        "defaultLocale": "en-US",
+        "displayName": {
+            "default": "Hello world"
+        },
+        "description": {
+            "default": "A simple hello world Office Add-in."
+        },
+        "icons": {
+            "16": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-16.png",
+            "32": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-32.png",
+            "80": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-80.png"
+        },
+        "highResolutionIconUrl": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world/assets/icon-64.png",
+        "supportUrl": "https://learn.microsoft.com/office/dev/add-ins/overview/office-add-in-code-samples",
+        "appDomains": [
+            "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/word-hello-world"
+        ],
+        "hosts": [
+            {
+                "host": "WORD",
+                "desktopFormFactor": {
+                    "getStarted": {
+                        "title": "Get started with the Hello world add-in!",
+                        "description": "Your sample add-in loaded successfully. Go to the HOME tab and click the 'Hello world' button to get started.",
+                        "learnMoreUrl": "http://go.microsoft.com/fwlink/?LinkId=276812"
+                    },
+                    "extensionPoint": {
+                        "officeTab": {
+                            "id": "
